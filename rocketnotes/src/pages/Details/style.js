@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import theme from "../../styles/theme";
 
 export const Container = styled.div`
   width: 100%;
@@ -12,3 +13,14 @@ export const Container = styled.div`
   "content"
   ;
 `
+export const Links = styled.ul`
+  
+  > li{
+    margin-top: 12px;
+
+    a{
+      color: ${({ theme })=> theme.COLORS.WHITE};
+    }
+  }
+
+`;

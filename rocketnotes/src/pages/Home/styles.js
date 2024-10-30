@@ -2,19 +2,33 @@ import styled from "styled-components"
 
 export const Container = styled.div`
   width: 100%;
+  height: 100vh;
   display: grid;
   grid-template-areas:
     "brand header"
     "menu search"
     "menu content"
     "newNote content";
-    grid-template-columns: 250px auto;
-    grid-template-rows: 105px 128px auto 64px;
+  grid-template-columns: 250px auto;
+  grid-template-rows: 105px 128px auto 64px;
 
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 `
 export const Brand = styled.div`
   grid-area: brand;
-`
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-bottom: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+  
+  >h1{
+    font-size: 24px;
+    color: ${({ theme }) => theme.COLORS.ORANGE};
+  }
+  `
 export const Menu = styled.ul`
   grid-area: menu;
 `

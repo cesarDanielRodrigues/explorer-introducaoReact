@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import backgroundImg from '../../assets/background.png'
+
 
 export const Container = styled.div`
 height: 100vh;
@@ -24,7 +26,6 @@ justify-content: center;
     font-size: 24px;
     margin-top: 84px;
     margin-bottom: 24px;
-
 }
 
 >p{
@@ -35,9 +36,12 @@ justify-content: center;
 >a{
     margin-top: 124px;
     color:${({theme})=>theme.COLORS.ORANGE};
-
-    
-
 }
+`
 
+export const Background = styled.div`
+    flex: 1;
+    background: url(${backgroundImg}) no-repeat center center;
+    background-size: cover;
+    filter: brightness(0.4);
 `
